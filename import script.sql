@@ -4,9 +4,7 @@ SELECT DISTINCT
             [P_O].ExternalSystemID AS [username],
             CAST(P_RB.[LongRoomNumber] AS NVARCHAR(MAX)) AS [Residence], 
             CAST([Name] AS nvarchar(MAX)) AS [Session]--,--session name
-            --SUBSTRING([Name], 1, CHARINDEX(' ',[Name])),--returns a bit of shit but what can you do
-            --SUBSTRING([Name], CHARINDEX(' ', [Name]), CHARINDEX(' ', [Name])+1)-- this does return SOME shit (order by 5 desc) to see but is also kinda useful
---			[P_CD].[Email]
+				    
 FROM        [Booking].[Booking] B_B
 JOIN        [Person].[Occupant] P_O ON P_O.[OccupantID] = B_B.[PersonID]
 JOIN        [Business].[BusinessArea] B_BA ON B_BA.[BusinessAreaID] = B_B.[BusinessAreaID]
