@@ -18,13 +18,13 @@ INNER JOIN    [Property].[Room] P_R ON P_R.[RoomID] = B_LLB.[RoomID]
 WHERE        B_LLBP.[LowLevelBookingAllocationStateID] != 2  
 AND B_LLB.[RoomOutOfServiceID] IS NULL AND ISNULL (B_B.[NoShow], 0) = 0 
 and (
---P_RB.LongRoomNumber like 'Polden P_.__%' OR -- full £50 account property 7
---P_RB.LongRoomNumber like 'Brendon%' OR  -- full £50 account property 7
---P_RB.LongRoomNumber like 'Quad%' OR -- part £25 account property 8
---P_RB.LongRoomNumber like 'Woodland Court Permanent Shared%'OR  -- part £25 account property 8
---P_RB.LongRoomNumber like 'YMCA%'OR -- occasional £70 account property 14
---P_RB.LongRoomNumber like 'Conygre Spur%'OR --occasional £50 account property 9
---P_RB.LongRoomNumber like 'Cotswold TAcad%' --occasional £50 account property 9
+P_RB.LongRoomNumber like 'Polden P_.__%' OR -- full £50 account property 7
+P_RB.LongRoomNumber like 'Brendon%' OR  -- full £50 account property 7
+P_RB.LongRoomNumber like 'Quad%' OR -- part £25 account property 8
+P_RB.LongRoomNumber like 'Woodland Court Permanent Shared%'OR  -- part £25 account property 8
+P_RB.LongRoomNumber like 'YMCA%'OR -- occasional £70 account property 14
+P_RB.LongRoomNumber like 'Conygre Spur%'OR --occasional £50 account property 9
+P_RB.LongRoomNumber like 'Cotswold TAcad%' --occasional £50 account property 9
 P_RB.LongRoomNumber like 'Eastwood E32%'
 )
 --and [P_CD].[Email] IS NOT NULL
